@@ -80,7 +80,7 @@ function comprarCanciones($db, $canciones) {
 function obtenerIdUltimoInvoice($db) {
 	$id = false;
 	
-	$sql = "SELECT max(InvoiceId) FROM invoice;";
+	$sql = "SELECT max(InvoiceId) FROM Invoice;";
 	if ($resultado = mysqli_query($db, $sql)) {
 		if ($row = mysqli_fetch_assoc($resultado)) {
 			$id = $row['max(InvoiceId)'];
@@ -93,7 +93,7 @@ function obtenerIdUltimoInvoice($db) {
 function obtenerIdUltimoInvoiceLine($db) {
 	$id = false;
 	
-	$sql = "SELECT max(InvoiceLineId) FROM invoiceline;";
+	$sql = "SELECT max(InvoiceLineId) FROM InvoiceLine;";
 	if ($resultado = mysqli_query($db, $sql)) {
 		if ($row = mysqli_fetch_assoc($resultado)) {
 			$id = $row['max(InvoiceLineId)'];
